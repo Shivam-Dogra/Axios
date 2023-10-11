@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game of Thrones</title>
+    <link href="/styles/style.css" rel="stylesheet">
+</head>
+<body>
+
+    <h1 class="title">Game of Thrones Character Details</h1>
+    <div id = "cards">
+        <% if(locals.data) { %>
+            <div class="cards-info" >
+                <img src="<%= data.imageUrl %>" alt = "character image">
+                <h3 class="fullName">Fullname: <%=data.fullName %></h3>
+                <h3 class="char-title">Title: <%=data.title %></h3>
+                <h3 class="family">Family: <%=data.family %></h3>
+            </div> 
+        <% } %>
+        
+        <% if(locals.error) { %>
+            <div class="error-msg">
+                <%= error%>
+            </div>
+        <% } %>
+        
+    </div>
+
+    <form class="form-section" action="/:id" method="GET">
+        <h3 class="fav-char">Want to get your favourite character info?</h3>
+        <select class="dropdown" name="type">
+            <option value="0">Daenerys</option>
+            <option value="1">Samwell</option>
+            <option value="2">Jon</option>
+            <option value="3">Arya</option>
+            <option value="4">Sansa</option>
+        </select>
+        <button id="btn">Submit</button>
+    </form>
+    
+</body>
+</html>

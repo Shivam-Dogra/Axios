@@ -1,0 +1,61 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: monospace;
+}
+
+body {
+    background-color: rgb(114, 118, 117);
+}
+.title{
+    margin: 10px 10px;
+    text-align: center;
+    background-color: rgb(27, 25, 25);
+    color: white;
+}
+
+#cards{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cards-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:14px;
+    background-color: rgb(248, 242, 242);
+    height: 420px;
+    width: 500px;
+    margin: 20px 10px;
+    border: none;
+    border-radius: 8px;
+
+}
+
+.form-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.dropdown{
+    width: 150px;
+    height: 30px;
+    text-align: center;
+    border-radius: 8px;
+}
+
+#btn{
+    height: 30px;
+    width: 70px;
+    background-color: rgb(213, 56, 56);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+}
